@@ -1,0 +1,13 @@
+<Project>
+    <PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<TargetPlatformVersion>10.0.18362.0</TargetPlatformVersion>
+		<TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
+		<Platforms>AnyCPU;x86;x64</Platforms>
+		<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+		<AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
+		<Nullable>enable</Nullable>
+		<GenerateLibraryLayout>true</GenerateLibraryLayout>    
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+</Project>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>DevExpress.WinUI.Core.Tests</RootNamespace>
+    <RuntimeIdentifier>win-$(Platform)</RuntimeIdentifier>
+    <OutputType>Library</OutputType>
+    <IsWinUIAlpha>true</IsWinUIAlpha>
+    <WindowsKitsPath>WinUI-Alpha-Projects-Don-t-Use-SDK-Xaml-Tools</WindowsKitsPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Microsoft.VCRTForwarders.140" />
+    <PackageReference Include="Microsoft.WinUI" >
+    <PackageReference Include="NUnit" />
+    <PackageReference Include="NUnit3TestAdapter" />
+  </ItemGroup>
+
+</Project>

@@ -1,18 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Controls;
-using Microsoft.UI.Xaml.Controls.Primitives;
-using Microsoft.UI.Xaml.Data;
-using Microsoft.UI.Xaml.Input;
-using Microsoft.UI.Xaml.Media;
-using Microsoft.UI.Xaml.Navigation;
-using DevExpress.TestRunner;
+﻿using Microsoft.UI.Xaml;
+using DevExpress.WinUI.TestRunner;
+using System.Diagnostics;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -24,16 +12,18 @@ namespace DevExpress.WinUI.Core.Tests.Runner
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        Stopwatch sw = Stopwatch.StartNew();
         public MainWindow()
         {
             this.InitializeComponent();
-            Activated += MainWindow_Activated;
+            RootUI.Loaded += Root_Loaded;
         }
-
-        private void MainWindow_Activated(object sender, WindowActivatedEventArgs args) {
+        private void Root_Loaded(object sender, RoutedEventArgs e) {
+            VisualTreeRoot.Initialize(this, RootUI);
             WinUITestRunner.DoWork(typeof(Initializer).Assembly.GetName().Name);
 
-            Root.Content = WinUITestRunner.Report;
+            TestUI.Content = WinUITestRunner.Report;
         }
     }
+
 }

@@ -4,10 +4,24 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "DevExpress.WinUI.Core.Tests.Runner (Package)", "DevExpress.WinUI.Core.Tests.Runner (Package)\DevExpress.WinUI.Core.Tests.Runner (Package).wapproj", "{5932843A-B0A3-4B72-A754-0D3ED9161930}"
+	ProjectSection(ProjectDependencies) = postProject
+		{42C81696-0790-4DCD-9AB3-97D476BCDC9E} = {42C81696-0790-4DCD-9AB3-97D476BCDC9E}
+		{F909F7EA-9501-40AB-B0D8-2E381DB8BBBA} = {F909F7EA-9501-40AB-B0D8-2E381DB8BBBA}
+		{112B69FC-064D-4ED7-B5A9-DCB9EE939FFC} = {112B69FC-064D-4ED7-B5A9-DCB9EE939FFC}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevExpress.WinUI.Core.Tests.Runner", "DevExpress.WinUI.Core.Tests.Runner\DevExpress.WinUI.Core.Tests.Runner.csproj", "{964CFF38-3EF1-4507-846D-6B846A5C860F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{42C81696-0790-4DCD-9AB3-97D476BCDC9E} = {42C81696-0790-4DCD-9AB3-97D476BCDC9E}
+		{F909F7EA-9501-40AB-B0D8-2E381DB8BBBA} = {F909F7EA-9501-40AB-B0D8-2E381DB8BBBA}
+		{112B69FC-064D-4ED7-B5A9-DCB9EE939FFC} = {112B69FC-064D-4ED7-B5A9-DCB9EE939FFC}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevExpress.WinUI.Core.Tests", "DevExpress.WinUI.Core.Tests\DevExpress.WinUI.Core.Tests.csproj", "{112B69FC-064D-4ED7-B5A9-DCB9EE939FFC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{42C81696-0790-4DCD-9AB3-97D476BCDC9E} = {42C81696-0790-4DCD-9AB3-97D476BCDC9E}
+		{F909F7EA-9501-40AB-B0D8-2E381DB8BBBA} = {F909F7EA-9501-40AB-B0D8-2E381DB8BBBA}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevExpress.WinUI.Core", "DevExpress.WinUI.Core\DevExpress.WinUI.Core.csproj", "{42C81696-0790-4DCD-9AB3-97D476BCDC9E}"
 EndProject

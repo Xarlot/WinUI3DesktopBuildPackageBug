@@ -1,16 +1,9 @@
-﻿<ResourceDictionary 
-    x:Class="DevExpress.TestRunner.RootResourceDictionary"
+﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:dxc="using:DevExpress.WinUI.Core">
+    xmlns:dxe="using:DevExpress.WinUI.Editors">
 
-    <Style TargetType="dxc:TestControl">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="dxc:TestControl">
-                    <Border/>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+    <ResourceDictionary.MergedDictionaries>
+        <dxe:EditorsResourceDictionary />
+    </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

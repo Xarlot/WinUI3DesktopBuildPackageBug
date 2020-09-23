@@ -1,32 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<TargetFramework>net5.0</TargetFramework>
-		<TargetPlatformVersion>10.0.18362.0</TargetPlatformVersion>
-		<TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
-		<RootNamespace>DevExpress.WinUI.Core</RootNamespace>
-		<Platforms>AnyCPU;x86;x64</Platforms>
-		<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-		<AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
-		<OutputType>Library</OutputType>
-		<Nullable>enable</Nullable>
-		<OutputPath>..\..\..\Bin\WinUI\win-$(Platform)</OutputPath>
-		<GenerateLibraryLayout>false</GenerateLibraryLayout>
-	</PropertyGroup>
-	<ItemGroup>
-	  <None Remove="Themes\Generic.xaml" />
-	  <None Remove="Themes\ResourceDictionary1.xaml" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Microsoft.VCRTForwarders.140" Version="1.0.6" />
-		<PackageReference Include="Microsoft.WinUI" Version="3.0.0-preview2.200713.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Page Update="Themes\ResourceDictionary1.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </Page>
-	</ItemGroup>
-
+    <PropertyGroup>
+        <RootNamespace>DevExpress.WinUI.Core</RootNamespace>
+        <OutputType>Library</OutputType>
+        <OutputPath>..\..\..\Bin\WinUI\</OutputPath>
+        <IsWinUIAlpha>true</IsWinUIAlpha>
+        <WindowsKitsPath>WinUI-Alpha-Projects-Don-t-Use-SDK-Xaml-Tools</WindowsKitsPath>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.VCRTForwarders.140"/>
+        <PackageReference Include="Microsoft.WinUI"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Page Update="Themes\Generic.xaml">
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+        <Page Update="Editors\Themes\Generic.xaml">
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+    </ItemGroup>
 </Project>

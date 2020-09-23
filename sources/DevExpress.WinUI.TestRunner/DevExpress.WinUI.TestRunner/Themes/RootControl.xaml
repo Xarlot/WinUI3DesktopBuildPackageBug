@@ -1,0 +1,19 @@
+﻿<ResourceDictionary 
+    x:Class="DevExpress.WinUI.TestRunner.RootResourceDictionary"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:testRunner="using:DevExpress.WinUI.TestRunner">
+
+    
+    <Style x:Key="RootControlStyle"  TargetType="testRunner:RootControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="testRunner:RootControl">
+                    <TextBox x:Name="TextBox" Text="{x:Bind Path=Content, Mode=OneWay}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="testRunner:RootControl" BasedOn="{StaticResource RootControlStyle}">
+    </Style>
+</ResourceDictionary>

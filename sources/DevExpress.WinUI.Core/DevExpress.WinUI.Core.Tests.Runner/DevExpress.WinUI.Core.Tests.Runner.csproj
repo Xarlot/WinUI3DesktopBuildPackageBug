@@ -1,43 +1,40 @@
-<Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<OutputType>WinExe</OutputType>
-		<TargetFramework>net5.0</TargetFramework>
-		<TargetPlatformVersion>10.0.18362.0</TargetPlatformVersion>
-		<TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
-		<RootNamespace>DevExpress.WinUI.Core.Tests.Runner</RootNamespace>
-		<ApplicationManifest>app.manifest</ApplicationManifest>
-		<Platforms>AnyCPU;x86;x64</Platforms>
-		<SelfContained>true</SelfContained>
-		<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-		<RuntimeIdentifier>win-$(Platform)</RuntimeIdentifier>
-		<AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
-		<OutputPath>..\..\..\Bin\WinUI\</OutputPath>
-	</PropertyGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Microsoft.VCRTForwarders.140" Version="1.0.6" />
-		<PackageReference Include="Microsoft.WinUI" Version="3.0.0-preview2.200713.0" />
-		<Manifest Include="$(ApplicationManifest)" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Remove="App.xaml" />
-		<None Remove="MainWindow.xaml" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\..\DevExpress.WinUI.TestRunner\DevExpress.WinUI.TestRunner\DevExpress.WinUI.TestRunner.csproj" />
-	  <ProjectReference Include="..\DevExpress.WinUI.Core.Tests\DevExpress.WinUI.Core.Tests.csproj" />
-	  <ProjectReference Include="..\DevExpress.WinUI.Core\DevExpress.WinUI.Core.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Page Update="App.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</Page>
-		<Page Update="MainWindow.xaml">
-			<Generator>MSBuild:Compile</Generator>
-		</Page>
-	</ItemGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <RootNamespace>DevExpress.WinUI.Core.Tests.Runner</RootNamespace>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <OutputPath>..\..\..\Bin\WinUI\</OutputPath>
+        <IsWinUIAlpha>true</IsWinUIAlpha>
+        <WindowsKitsPath>WinUI-Alpha-Projects-Don-t-Use-SDK-Xaml-Tools</WindowsKitsPath>
+        <GenerateProgramFile>false</GenerateProgramFile>
+    </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="Microsoft.VCRTForwarders.140" />
+      <PackageReference Include="Microsoft.WinUI" />
+      <PackageReference Include="NUnit" />
+      <PackageReference Include="NUnit3TestAdapter" />
+      <PackageReference Include="NUnit.Engine.Api" />
+      <PackageReference Include="Mono.Cecil" />
+      <Manifest Include="$(ApplicationManifest)" />
+    </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.WinUI.Core.dll">
+      <HintPath>..\..\..\Bin\WinUI\DevExpress.WinUI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.WinUI.Core.Tests.dll">
+      <HintPath>..\..\..\Bin\WinUI\DevExpress.WinUI.Core.Tests.dll</HintPath>
+    </Reference>
+      <Reference Include="DevExpress.WinUI.TestRunner.dll">
+      <HintPath>..\..\..\Bin\WinUI\DevExpress.WinUI.TestRunner.dll</HintPath>
+    </Reference> 
+  </ItemGroup>
+    <ItemGroup>
+        <Page Update="App.xaml">
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+        <Page Update="MainWindow.xaml">
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+    </ItemGroup>
 
 </Project>

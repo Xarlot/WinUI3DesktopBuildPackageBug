@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -16,7 +17,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Shapes;
-using DevExpress.TestRunner;
+
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -43,8 +44,7 @@ namespace DevExpress.WinUI.Core.Tests.Runner
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="args">Details about the launch request and process.</param>
-        protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
-        {
+        protected override void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args) {
             m_window = new MainWindow();
             m_window.Activate();
         }
@@ -61,6 +61,6 @@ namespace DevExpress.WinUI.Core.Tests.Runner
             // Save application state and stop any background activity
         }
 
-        private Window m_window;
+        private Window? m_window;
     }
 }
